@@ -14,11 +14,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
+    <!--继承父项目的依赖-->
+    <!--无需关注版本号，自动版本仲裁-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.4.RELEASE</version>
     </parent>
+
+    <!-- 自定义版本号-->
+    <!--    <properties>-->
+    <!--        <mysql.version>5.1.43</mysql.version>-->
+    <!--    </properties>-->
 
 
     <dependencies>
@@ -28,5 +36,14 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
